@@ -8,3 +8,8 @@ spec:
   containers:
     - name: nginx
       image: nginx
+      # passing in environment variables that may be needed
+      # helpful when setting up stuff like db and you don't want to use default credentials.
+      env:
+        - name: POSTGRES_PASSWORD
+          value: mysecretpassword
