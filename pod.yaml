@@ -15,3 +15,8 @@ spec:
     image: nginx
   - name: busybox
     image: busybox
+
+# use kubectl apply to create new object
+# kubectl apply -f pod.yaml
+# use kubectl get pods to check if created
+# use kubectl describe pod nginx / busybox to see more details about pod
