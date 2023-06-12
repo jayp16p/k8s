@@ -1,0 +1,17 @@
+# My First Pod !
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  labels:
+  # can be anything relevant here
+    app: nginx
+    tier: frontend
+spec:
+# for images below: has to be exact as dockerhub
+# if using another repo for images specify full path
+  containers:
+  - name: nginx
+    image: nginx
+  - name: busybox
+    image: busybox
