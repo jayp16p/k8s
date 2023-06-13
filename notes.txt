@@ -16,3 +16,13 @@ kubectl delete pod "name"
 kubectl get replicationcontroller
 
 kubectl get replicaset
+
+kubectl apply -f replicaset-definition-2.yaml 
+   23  kubectl get rs
+   24  kubectl delete rs replicaset-1
+   25  kubectl delete rs replicaset-2
+   26  kubectl get rs
+
+kubectl edit rs new-replica-set
+
+ kubectl scale --replicas=4 rs/new-replica-set
