@@ -1,0 +1,18 @@
+--- Dumps from Labs
+
+controlplane ~ ✖ kubectl get nodes
+NAME           STATUS   ROLES                  AGE   VERSION
+controlplane   Ready    control-plane,master   22m   v1.27.1+k3s1
+
+kubectl describe node controlplane
+kubectl describe node controlplane | grep OS
+
+kubectl run nginx --image=nginx ( to run pod with name nginx, image depense on whether "nginx" exists in dockerhub)
+
+kubectl get pods -o wide
+
+kubectl delete pod "name"
+
+kubectl get replicationcontroller
+
+kubectl get replicaset
