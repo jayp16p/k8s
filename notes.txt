@@ -26,3 +26,13 @@ kubectl apply -f replicaset-definition-2.yaml
 kubectl edit rs new-replica-set
 
  kubectl scale --replicas=4 rs/new-replica-set
+
+ kubectl get all
+
+
+ kubectl create -f deployment-def.yaml
+ kubectl get deployments
+ kubectl apply -f deployment-def.yaml - TO UPDATE after changing file OR kubectl set image deployment/myapp-deployment nginx=nginx:1.9.1
+ kubectl rollout status deployment/myapp-deployment - WHILE HAPPENING
+ kubectl rollout history deployment/myapp-deployment - after its happened
+ kubectl rollout undo deployment/myapp-deployment - ROLL BACK
