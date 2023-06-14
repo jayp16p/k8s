@@ -37,3 +37,9 @@ kubectl edit rs new-replica-set
  kubectl rollout status deployment/myapp-deployment - WHILE HAPPENING
  kubectl rollout history deployment/myapp-deployment - after its happened
  kubectl rollout undo deployment/myapp-deployment - ROLL BACK
+
+
+
+##########SERVICES###############
+
+

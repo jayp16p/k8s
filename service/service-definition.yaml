@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: myapp-service
+spec:
+  type: NodePort
+  ports:
+    # port below MUST be specified! targetPort and nodePort are optional and can be specified if known.
+    - port: 80
+      # for target port below, if not specified it assumes as same port number as above port.
+      targetPort: 80
+      # Nodeport below can be anything between 32000 & 32767, if not specified it is assigned randomly between 32k & 32767
+      nodePort: 30004
+  # selector helps to bind service with node using labels!
+  selector:
+    # borrowing tags from replicaset/replicaset.yaml
+    app: myapp
+    
