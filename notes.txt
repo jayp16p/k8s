@@ -31,6 +31,7 @@ kubectl edit rs new-replica-set
 
 
  kubectl create -f deployment-def.yaml
+ kubectl create -f deployment-def.yaml --record -> this tells kubernetes to record this event so that when we run history it shows i.e cause of change is tracked in the revision history
  kubectl get deployments
  kubectl apply -f deployment-def.yaml - TO UPDATE after changing file OR kubectl set image deployment/myapp-deployment nginx=nginx:1.9.1
  kubectl rollout status deployment/myapp-deployment - WHILE HAPPENING
