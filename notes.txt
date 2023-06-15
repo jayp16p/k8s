@@ -41,5 +41,8 @@ kubectl edit rs new-replica-set
 
 
 ##########SERVICES###############
+checkout service-definition.yaml file, have added comments to understand.
+kubectl create -f service-definition.yaml
+kubectl get svc
 
 
