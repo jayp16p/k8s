@@ -17,3 +17,23 @@
 
 #####USE DEPLOY OPTION OF FILES - those are better to scale up and better for practice in production############
 #CHECK FILES WITH -deploy.yaml names#
+
+-services file remain the same, those stay unaffected even with use of deployments.
+-we use deployments, for ease of scaling.
+- kubectl create -f voting-app-deployment.yaml
+- kubectl create -f voting-app-service.yaml
+- kubectl create -f redis-deploy.yaml
+- kubectl create -f redis-service.yaml
+- kubectl create -f postgres-deploy.yaml
+- kubectl create -f postgres-service.yaml
+- kubectl get pods,svc #to verify if all is working fine!
+- kubectl create -f worker-app-deploy.yaml #worker has no service!
+- kubectl create -f result-app-deploy.yaml
+- kubectl create -f result-app-service.yaml
+- kubectl create -f voting-app-deployment.yaml
+- kubectl create -f voting-app-service.yaml
+- kubectl get deployments,svc #to verify
+- minikube service voting-service --url
+- minikube service result-service --url
+- kubectl scale deployment voting-app-deploy --replicas=3
+- kubectl get deployments voting-app-deploy
