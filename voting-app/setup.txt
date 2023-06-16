@@ -12,3 +12,8 @@
 - kubectl create -f result-app-pod.yaml
 - kubectl create -f result-app-service.yaml
 - kubectl get pods,svc #to verify
+
+
+
+#####USE DEPLOY OPTION OF FILES - those are better to scale up and better for practice in production############
+#CHECK FILES WITH -deploy.yaml names#
